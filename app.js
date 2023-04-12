@@ -1,14 +1,5 @@
-// Jquery Selectors
+// How To Change Html Content
 
 $(document).ready(() => {
-  // Class Selector
-
-  let box = $(".box1");
-  console.log(box);
-
-  // Id Selector
-
-  let box2 = $("#box2");
-
-  console.log(box2);
+  $("#box2").html("<h1>Hello</h1>");
 });
