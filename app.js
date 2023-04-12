@@ -1,37 +1,31 @@
-// ************************************** Jquery Mouse Events **************************************
-// (1) click
-// (2) dblclick
-// (3) contextmenu
-// (4) mouseenter
-// (5) mouseleave
+// ************************************** Jquery Keyboard Events **************************************
+
+// (1) keypress
+// (2) keydown
+// (3) keyup
 
 $(document).ready(() => {
-  // ******************* Click Mouse Event *******************
+  // ******************* Keypress Keyboard Event *******************
 
-  $(".btn-primary").click(() => {
-    $(".card").css("backgroundColor", "red");
-  });
+  // $("body").keypress((e) => {
+  //   console.log(e.key);
+  //   $(".card").html(`<h1 class='text-center text-white'>${e.key}</h1>`);
+  //   $(".card").css("background-color", "blue");
+  // });
 
-  // ******************* Double Click Mouse Event *******************
+  // ******************* Keydown Keyboard Event *******************
 
-  $(".btn-primary").dblclick(() => {
-    $(".card").css("backgroundColor", "blue");
-  });
+  // $("body").keydown((e) => {
+  //   console.log(e.key);
+  //   $(".card").html(`<h1 class='text-center text-white'>${e.key}</h1>`);
+  //   $(".card").css("background-color", "blue");
+  // });
 
-  // ******************* Right Click Mouse Event *******************
+  // ******************* Keyup Keyboard Event *******************
 
-  $(".btn-primary").contextmenu(() => {
-    $(".card").css("backgroundColor", "gold");
-  });
-
-  // ******************* Mouse Enter Event *******************
-
-  $(".card").mouseenter(() => {
-    $(".card").css("backgroundColor", "purple");
-  });
-
-  // ******************* Mouse Leave Event *******************
-  $(".card").mouseleave(() => {
-    $(".card").css("backgroundColor", "#fff");
-  });
+  // $("body").keyup((e) => {
+  //   console.log(e.key);
+  //   $(".card").html(`<h1 class='text-center text-white'>${e.key}</h1>`);
+  //   $(".card").css("background-color", "blue");
+  // });
 });
