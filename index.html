@@ -10,18 +10,40 @@
     <title>Jquery</title>
   </head>
   <body>
-    <div class="p-5 bg-danger w-25" id="box2"></div>
+    <h1>Hello</h1>
 
+    <ul>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <script>
-
-      // How To Change Html Content 
+      // Select By Tag
 
       $(document).ready(() => {
-        $("#box2").html("<h1>Hello</h1>")
-      })
+        let h1 = $("h1");
 
+        console.log(h1);
+
+        // Select Specific Tag
+
+        let listItem = $("ul li:nth-child(2)").css("backgroundColor", "red");
+
+        console.log(listItem);
+
+        // Select All Tag
+
+        let allElement = $("*");
+
+        allElement.css("border", "2px solid blue")
+        allElement.css("margin", "2px")
+
+        console.log(allElement);
+      });
     </script>
 
     <!-- <script src="./app.js"></script> -->
