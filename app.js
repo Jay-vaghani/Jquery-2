@@ -1,31 +1,39 @@
-// ************************************** Jquery Keyboard Events **************************************
+// ************************************** Jquery Form Events **************************************
 
-// (1) keypress
-// (2) keydown
-// (3) keyup
+// (1) focus
+// (2) blur
+// (3) select
+// (4) change
+// (5) submit
 
 $(document).ready(() => {
-  // ******************* Keypress Keyboard Event *******************
+  // ******************* Focus Form Event *******************
 
-  // $("body").keypress((e) => {
-  //   console.log(e.key);
-  //   $(".card").html(`<h1 class='text-center text-white'>${e.key}</h1>`);
-  //   $(".card").css("background-color", "blue");
-  // });
+  $("input[type=email] , input[type=password]").focus(function () {
+    $(this).css("background-color", "#eee");
+  });
 
-  // ******************* Keydown Keyboard Event *******************
+  // ******************* Blur Form Event *******************
 
-  // $("body").keydown((e) => {
-  //   console.log(e.key);
-  //   $(".card").html(`<h1 class='text-center text-white'>${e.key}</h1>`);
-  //   $(".card").css("background-color", "blue");
-  // });
+  $("input[type=email] , input[type=password]").blur(function () {
+    $(this).css("background-color", "#fff");
+  });
 
-  // ******************* Keyup Keyboard Event *******************
+  // ******************* Select Form Event *******************
 
-  // $("body").keyup((e) => {
-  //   console.log(e.key);
-  //   $(".card").html(`<h1 class='text-center text-white'>${e.key}</h1>`);
-  //   $(".card").css("background-color", "blue");
-  // });
+  $("input[type=email] , input[type=password]").select(function () {
+    $(this).css("background-color", "#e8e8e8e8");
+  });
+
+  // ******************* Change Form Event *******************
+
+  $("input[type=email] , input[type=password]").change(function () {
+    console.log(this.value);
+  });
+
+  // ******************* Submit Form Event *******************
+
+  $("#form").submit((e) => {
+    e.preventDefault();
+  });
 });
