@@ -1,19 +1,27 @@
-// ************************************** Jquery CSS Methods **************************************
+// ************************************** Jquery On & Off Method Methods **************************************
 
-// (1) addClass
-// (2) removeClass
-// (3) toggleClass
+// (1) on
+// (2) off
 
 $(document).ready(() => {
-  // $(".box").css("background-color", "red");
-  // $(".box").css("width", "200px");
-  // $(".box").css("height", "200px");
+  // ******************* Adding Multiple Events In Element *******************
 
-  // ******************* Adding Multiple Css Properties *******************
+  $(".box").on({
+    click: function () {
+      $(this).css("background-color", "red");
+    },
 
-  $(".box").css({
-    backgroundColor: "red",
-    width: "200px",
-    height: "200px",
+    mouseenter: function () {
+      $(this).css("background-color", "blue");
+    },
+
+    mouseleave: function () {
+      $(this).css("background-color", "green");
+    },
   });
+
+  // ******************* Removing Multiple Events In Element *******************
+
+
+  $(".box").off("mouseenter mouseleave")
 });
