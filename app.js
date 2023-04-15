@@ -1,21 +1,19 @@
-// ************************************** Jquery Add Remove and Toggle Class **************************************
-
+// ************************************** Jquery CSS Methods **************************************
 
 // (1) addClass
 // (2) removeClass
 // (3) toggleClass
 
-
 $(document).ready(() => {
-  $("#add").click(() => {
-    $(".box").addClass("active");
-  });
+  // $(".box").css("background-color", "red");
+  // $(".box").css("width", "200px");
+  // $(".box").css("height", "200px");
 
-  $("#remove").click(() => {
-    $(".box").removeClass("active");
-  });
+  // ******************* Adding Multiple Css Properties *******************
 
-  $("#toggle").click(() => {
-    $(".box").toggleClass("active");
+  $(".box").css({
+    backgroundColor: "red",
+    width: "200px",
+    height: "200px",
   });
 });
