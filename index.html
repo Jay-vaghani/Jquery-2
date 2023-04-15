@@ -10,16 +10,26 @@
     <title>Jquery</title>
   </head>
 
-  <style></style>
+  <style>
+    .box{
+      width: 200px;
+      height: 200px;
+      background: royalblue;
+      transition: 0.3s ease-in-out;
+    }
+
+    .box.active{
+      width: 400px;
+      height: 400px;
+    }
+  </style>
 
   <body>
-    <h3 class="p-4 bg-primary text-white" id="heading">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa animi
-      deleniti voluptatum? Reiciendis itaque molestiae, atque dolore veritatis
-      fugiat consequuntur.
-    </h3>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, mollitia? Odit molestias recusandae distinctio fugit, itaque cum est iusto error amet ratione eos voluptate officiis sit quis nulla laborum soluta fugiat nobis id tempore veritatis? Delectus hic rerum consequuntur, autem enim magnam, magni asperiores exercitationem quaerat, doloribus at aperiam animi!</p>
+    
+    <div class="box"></div>
+    <button class="btn btn-primary" id="add">Add</button>
+    <button class="btn btn-primary" id="remove">Remove</button>
+    <button class="btn btn-primary" id="toggle">Toggle</button>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./app.js"></script>

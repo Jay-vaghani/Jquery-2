@@ -1,23 +1,21 @@
-// ************************************** Jquery Set Methods From Html Element **************************************
+// ************************************** Jquery Add Remove and Toggle Class **************************************
 
-// (1) html
-// (2) text
-// (3) attr
+
+// (1) addClass
+// (2) removeClass
+// (3) toggleClass
+
 
 $(document).ready(() => {
-  // ******************* Set Text Method *******************
+  $("#add").click(() => {
+    $(".box").addClass("active");
+  });
 
-  // $("h3").text("Hello World");
+  $("#remove").click(() => {
+    $(".box").removeClass("active");
+  });
 
-
-   // ******************* Set HTML Method *******************
-
-  $("p").html("<h1 class='text-primary'>lorem ipsum dolor sit amet</h1>")
-
-
-
-     // ******************* Set Attribute Method (class, id) *******************
-
-     $("p").attr("class","text-center")
-
+  $("#toggle").click(() => {
+    $(".box").toggleClass("active");
+  });
 });
