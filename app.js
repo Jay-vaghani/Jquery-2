@@ -1,22 +1,23 @@
-// ************************************** Jquery Get Methods From Html Element **************************************
+// ************************************** Jquery Set Methods From Html Element **************************************
 
 // (1) html
 // (2) text
 // (3) attr
 
 $(document).ready(() => {
-  // ******************* Get Element Attribute (class, id) *******************
+  // ******************* Set Text Method *******************
 
-  // let v1 = $(".card").attr("abc")
-  // console.log(v1);
+  // $("h3").text("Hello World");
 
-  // ******************* Get Element Text Method *******************
 
-  // let v2 = $(".card").text()
-  // console.log(v2);
+   // ******************* Set HTML Method *******************
 
-  // ******************* Get HTML Method *******************
+  $("p").html("<h1 class='text-primary'>lorem ipsum dolor sit amet</h1>")
 
-  // let v3 = $(".card").html();
-  // console.log(v3);
+
+
+     // ******************* Set Attribute Method (class, id) *******************
+
+     $("p").attr("class","text-center")
+
 });
