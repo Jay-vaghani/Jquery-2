@@ -1,18 +1,22 @@
-// ************************************** Jquery Window Events **************************************
+// ************************************** Jquery Get Methods From Html Element **************************************
 
-// (1) scroll
-// (2) resize
+// (1) html
+// (2) text
+// (3) attr
 
 $(document).ready(() => {
-  // ******************* Scroll Form Event *******************
+  // ******************* Get Element Attribute (class, id) *******************
 
-  $(window).scroll((e) => {
-    console.log(window.scrollY);
-  });
+  // let v1 = $(".card").attr("abc")
+  // console.log(v1);
 
-  // ******************* Resize Form Event *******************
+  // ******************* Get Element Text Method *******************
 
-  $(window).resize(function (e) {
-    $("h1").html(window.outerWidth);
-  });
+  // let v2 = $(".card").text()
+  // console.log(v2);
+
+  // ******************* Get HTML Method *******************
+
+  // let v3 = $(".card").html();
+  // console.log(v3);
 });
