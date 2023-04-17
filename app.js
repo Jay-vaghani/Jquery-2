@@ -1,18 +1,14 @@
-// ************************************** Jquery Empty & Remove Method **************************************
+// ************************************** Jquery Clone Method **************************************
 
-// (1) empty  // Only Remove Content Inside Element
-// (2) remove // Remove Element
+// (1) appendTo  // Only Remove Content Inside Element
+// (2) prependTo // Remove Element
 
 $(document).ready(() => {
-  // ******************* Remove Content Inside Element *******************
+  $(".clone").click(function () {
+    let cloneH3 = $(".card h3").clone();
+    let cloneP = $(".card p").clone();
 
-  $(".empty").click(() => {
-    $(".card").empty();
-  });
-
-  // ******************* Remove Element *******************
-
-  $(".remove").click(() => {
-    $(".card").remove();
+    $(".card2").append(cloneH3)
+    $(".card2").append(cloneP)
   });
 });
