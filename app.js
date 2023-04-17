@@ -1,14 +1,18 @@
-// ************************************** Jquery Append & Prepend Method **************************************
+// ************************************** Jquery Empty & Remove Method **************************************
 
-// (1) append
-// (2) prepend
+// (1) empty  // Only Remove Content Inside Element
+// (2) remove // Remove Element
 
 $(document).ready(() => {
-  $(".btn-1").click(function () {
-    $(".list-group").append("<li class='list-group-item'>Item append</li>");
+  // ******************* Remove Content Inside Element *******************
+
+  $(".empty").click(() => {
+    $(".card").empty();
   });
 
-  $(".btn-2").click(function () {
-    $(".list-group").prepend("<li class='list-group-item'>Item append</li>");
+  // ******************* Remove Element *******************
+
+  $(".remove").click(() => {
+    $(".card").remove();
   });
 });
