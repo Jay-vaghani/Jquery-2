@@ -1,14 +1,22 @@
-// ************************************** Jquery Clone Method **************************************
+// ************************************** ReplaceWith & ReplaceAll **************************************
 
-// (1) appendTo  // Only Remove Content Inside Element
-// (2) prependTo // Remove Element
+// (1) replaceWith
+// (2) replaceAll
 
 $(document).ready(() => {
-  $(".clone").click(function () {
-    let cloneH3 = $(".card h3").clone();
-    let cloneP = $(".card p").clone();
+  // ******************* Replace Element With Replace With *******************
 
-    $(".card2").append(cloneH3)
-    $(".card2").append(cloneP)
+  $(".replaceWith").click(function () {
+    $(".card h3").replaceWith(
+      "<h2 class='text-white fw-semibold'>New Heading</h2>"
+    );
+  });
+
+  // ******************* Replace Element With Replace All *******************
+
+  $(".replaceAll").click(function () {
+    $("<h2 class='text-white fw-semibold'>New Heading</h2>").replaceAll(
+      ".card h3"
+    );
   });
 });
