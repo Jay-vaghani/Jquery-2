@@ -1,27 +1,20 @@
-// ************************************** Jquery On & Off Method Methods **************************************
+// ************************************** Jquery Before & After Method ************************************** 
 
-// (1) on
-// (2) off
+// (1) after
+// (2) before
 
 $(document).ready(() => {
-  // ******************* Adding Multiple Events In Element *******************
+ 
 
-  $(".box").on({
-    click: function () {
-      $(this).css("background-color", "red");
-    },
-
-    mouseenter: function () {
-      $(this).css("background-color", "blue");
-    },
-
-    mouseleave: function () {
-      $(this).css("background-color", "green");
-    },
-  });
-
-  // ******************* Removing Multiple Events In Element *******************
+    $(".btn-1").click(function () {
+        $(".list-group").after("<li class='list-group-item'>Item append</li>")
+    })
 
 
-  $(".box").off("mouseenter mouseleave")
+    $(".btn-2").click(function () {
+        $(".list-group").before("<li class='list-group-item'>Item append</li>")
+    })
+
+
+
 });
