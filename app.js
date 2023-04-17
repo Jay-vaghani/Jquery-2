@@ -1,20 +1,14 @@
-// ************************************** Jquery Before & After Method ************************************** 
+// ************************************** Jquery Append & Prepend Method **************************************
 
-// (1) after
-// (2) before
+// (1) append
+// (2) prepend
 
 $(document).ready(() => {
- 
+  $(".btn-1").click(function () {
+    $(".list-group").append("<li class='list-group-item'>Item append</li>");
+  });
 
-    $(".btn-1").click(function () {
-        $(".list-group").after("<li class='list-group-item'>Item append</li>")
-    })
-
-
-    $(".btn-2").click(function () {
-        $(".list-group").before("<li class='list-group-item'>Item append</li>")
-    })
-
-
-
+  $(".btn-2").click(function () {
+    $(".list-group").prepend("<li class='list-group-item'>Item append</li>");
+  });
 });
