@@ -1,22 +1,20 @@
-// ************************************** ReplaceWith & ReplaceAll **************************************
+// ************************************** Jquery Wrap & UnWrap Method ************************************** 
 
-// (1) replaceWith
-// (2) replaceAll
+// (1) wrap 
+// (2) unWrap
+
 
 $(document).ready(() => {
-  // ******************* Replace Element With Replace With *******************
+   // ******************* Wrapping Element With Wrap *******************
 
-  $(".replaceWith").click(function () {
-    $(".card h3").replaceWith(
-      "<h2 class='text-white fw-semibold'>New Heading</h2>"
-    );
+  $(".wrap").click( () => {
+    $(".box").wrap("<div class='container'></div>")
   });
 
-  // ******************* Replace Element With Replace All *******************
+  // ******************* Unwrapping Element With UnWrap *******************
 
-  $(".replaceAll").click(function () {
-    $("<h2 class='text-white fw-semibold'>New Heading</h2>").replaceAll(
-      ".card h3"
-    );
+  $(".unWrap").click( () => {
+    console.log("ok");
+    $(".box").unwrap()
   });
 });
