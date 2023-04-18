@@ -1,12 +1,11 @@
-// ************************************** Jquery WrapAll Method **************************************  
+// ************************************** Jquery wrapInner Method **************************************
 
-// (1) wrapAll 
+// (1) wrapInner
 
 $(document).ready(() => {
-   
+  // ******************* Creating Element Inside Element *******************
 
-$(".wrapAll").click(() => {
-  $(".box p").wrap("<div class='bg-info'></div>")
-})
-  
+  $(".wrapInner").click(() => {
+    $(".box p").wrapInner("<b></b>");
+  });
 });
