@@ -8,32 +8,19 @@
       rel="stylesheet"
     />
 
-    
-
     <title>Jquery</title>
   </head>
 
   <style>
-    .card{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    body {
+      height: 200vh;
+      width: 200%;
     }
   </style>
 
   <body>
-
-
-    <div class="card p-5 bg-primary w-25">
-
-    </div>
-
-    <h1>Card Top Position: <span></span></h1>
-    <h1>Card Left Position: <span></span></h1>
-
-    <button class="btn btn-primary getPosition">Get Position</button>
-    <button class="btn btn-primary setPosition">Set Position</button>
+    <button class="btn btn-primary top position-fixed top-0">Get To Top</button>
+    <button class="btn btn-primary left position-fixed top-50">Get To Left</button>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./app.js"></script>

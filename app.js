@@ -1,29 +1,40 @@
-// ************************************** Jquery Position & Offset Method **************************************
+// ************************************** Jquery  Scroll Top & Scroll Left Method **************************************
 
-// (1) position:
-//              *   Gives You The Position Of Element According To Your Parent Element
-//              *   Ignores The Margin And Padding
-//              *   Can Not Set Position Of Element
-
-// (2) offset:
-//            *   Gives You The Exact Position Of Element According To Body
-//            *   Position Absolute
-//            *   Can Set Position Of Element
+// (1) scrollTop
+// (2) scrollLeft
 
 $(document).ready(function () {
-  // Get Position Of Element
+  $(window).scroll(() => {
+    // ***************** Get Scroll Values  *****************
 
-  $(".getPosition").click(() => {
-    $("h1 span").html(`${$(".card").position().top}`);
-    $("h1:nth-child(2) span").html(`${$(".card").position().left}`);
-  });
+    // Scroll Top
 
-  // Get Offset Of Element
+    // console.clear();
+    // console.log($(window).scrollTop());
 
-  $(".setPosition").click(() => {
-    $(".card").offset({
-      top: 300,
-      left: 300,
-    });
+    // Scroll Left
+
+    // console.clear();
+    // console.log($(window).scrollLeft());
+
+
+    // ***************** Set Scroll Values  *****************
+
+    // Set Scroll Top
+
+    $(".top").click(() => {
+      $(window).scrollTop(0)
+    })
+
+
+    // Set Scroll Left
+
+
+    $(".left").click(() => {
+      $(window).scrollLeft(0)
+    })
+
+
+
   });
 });
