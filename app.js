@@ -1,40 +1,29 @@
-// ************************************** Jquery Width & Height Methods **************************************
+// ************************************** Jquery Position & Offset Method **************************************
 
-// (1) width
-// (2) innerWidth
-// (3) outerWidth
-// (4) outerWidth true
+// (1) position:
+//              *   Gives You The Position Of Element According To Your Parent Element
+//              *   Ignores The Margin And Padding
+//              *   Can Not Set Position Of Element
 
-// (5) height
-// (6) innerHeight
-// (7) outerHeight
-// (8) outerHeight true
+// (2) offset:
+//            *   Gives You The Exact Position Of Element According To Body
+//            *   Position Absolute
+//            *   Can Set Position Of Element
 
-$(document).ready(() => {
-  // ******************* Set Element Width *******************
+$(document).ready(function () {
+  // Get Position Of Element
 
-  $(".card").width("750px");
+  $(".getPosition").click(() => {
+    $("h1 span").html(`${$(".card").position().top}`);
+    $("h1:nth-child(2) span").html(`${$(".card").position().left}`);
+  });
 
-  // ******************* Get Element Width *******************
+  // Get Offset Of Element
 
-  console.log($(".box").width()); // width of the content inside element
-  console.log($(".box").innerWidth()); // width including padding
-  console.log($(".box").outerWidth()); // width including padding and border
-  console.log($(".box").outerWidth(true)); // width including padding, border and margin
-
-
-  console.log("*************************");
-
-  // ******************* Set Element Height *******************
-
-  $(".box").height("220px");
-
-  // ******************* Get Element Height *******************
-
-
-  console.log($(".box").height()); // height of the content inside element
-  console.log($(".box").innerHeight()); // height including padding
-  console.log($(".box").outerHeight()); // height including padding and border
-  console.log($(".box").outerHeight(true)); // height including padding, border and margin
-
+  $(".setPosition").click(() => {
+    $(".card").offset({
+      top: 300,
+      left: 300,
+    });
+  });
 });

@@ -8,14 +8,32 @@
       rel="stylesheet"
     />
 
+    
+
     <title>Jquery</title>
   </head>
 
-  <body>
-    <div class="p-5 bg-primary box text-white border border-5 border-info m-5">
+  <style>
+    .card{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
 
-      <p class="bg-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit voluptate eum animi corporis ea nihil assumenda mollitia sapiente, voluptatibus aperiam, aliquid nisi veniam ex hic in, earum cupiditate similique praesentium architecto sit ipsa unde. Repudiandae magnam, ipsa aut beatae quam, iusto, provident perferendis doloribus harum repellendus eius facere officia natus.</p>
+  <body>
+
+
+    <div class="card p-5 bg-primary w-25">
+
     </div>
+
+    <h1>Card Top Position: <span></span></h1>
+    <h1>Card Left Position: <span></span></h1>
+
+    <button class="btn btn-primary getPosition">Get Position</button>
+    <button class="btn btn-primary setPosition">Set Position</button>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./app.js"></script>
