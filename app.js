@@ -58,4 +58,28 @@ $(document).ready(function () {
   //         $("h2").text("Show")
   //     })
   // })
+
+
+  // $(".toggle").click(function () {
+  //     $(".card").toggle()
+  // })
+
+
+  // Hide And Show Element Width Transition (Give Parameters in Milliseconds)
+
+
+  // $(".toggle").click(function () {
+  //     let x = $(".card").toggle(300)
+  //     console.log(x);
+  // })
+
+
+  // Hide And Show Element Width Callback Function
+
+
+  $(".toggle").click(function () {
+      $(".card").toggle(300, function(){
+          $("h2").text("Toggle")
+      })
+  })
 });
