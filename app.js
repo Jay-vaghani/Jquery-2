@@ -1,40 +1,61 @@
-// ************************************** Jquery  Scroll Top & Scroll Left Method **************************************
+// ************************************** Jquery  Hide, Show And Toggle Method **************************************
 
-// (1) scrollTop
-// (2) scrollLeft
+// (1) hide
+// (2) show
+// (3) toggle
 
 $(document).ready(function () {
-  $(window).scroll(() => {
-    // ***************** Get Scroll Values  *****************
-
-    // Scroll Top
-
-    // console.clear();
-    // console.log($(window).scrollTop());
-
-    // Scroll Left
-
-    // console.clear();
-    // console.log($(window).scrollLeft());
+  // Hide Element Using Hide Method
 
 
-    // ***************** Set Scroll Values  *****************
-
-    // Set Scroll Top
-
-    $(".top").click(() => {
-      $(window).scrollTop(0)
-    })
+  // $(".hide").click(() => {
+  //   $(".card").hide();
+  // });
 
 
-    // Set Scroll Left
+  // Hide Method Width Transition (Give Parameters in Milliseconds)
 
 
-    $(".left").click(() => {
-      $(window).scrollLeft(0)
-    })
-
-
-
+  $(".hide").click(() => {
+    $(".card").hide(300);
   });
+
+
+  // Hide Method Width Callback Function
+
+
+  $(".hide").click(function () {
+    $(".card").hide(300, function () {
+      $("h2").html("Hide");
+    });
+  });
+
+
+  // *************************************************
+
+
+  // Show Element Using Show Method
+
+
+  // $(".show").click(function () {
+  //     $(".card").show()
+  // })
+
+
+  // Show Method Width Transition (Give Parameters in Milliseconds)
+
+
+  // $(".show").click(function () {
+  //     $(".card").show(300)
+  // })
+
+
+  // Show Method Width Callback Function
+
+
+  // $(".show").click(function () {
+  //     $(".card").show(300, function(){
+  //         $("h2").text("Show")
+  //     })
+  // })
 });
