@@ -1,97 +1,89 @@
-// ************************************** Jquery Fade In, Fade Out, Fade Toggle, Fade To Methods ************************************** 
-// (1) fadeOut
-// (2) fadeIn
-// (3) fadeToggle
-// (4) fadeTo
+// ************************************** Jquery Slide Up, Slide Down And Slide Toggle Method ************************************** 
+
+
+// (1) slideUp 
+// (2) slideDown 
+// (3) slideToggle 
+
+
 
 $(document).ready(function () {
 
-  // Hide Element Using Fade Out Method
+  // Hide Element Using Slide Up Method
 
 
-  $(".fadeOut").click(function () {
-      $(".card").fadeOut()
+  // $(".slideUp").click(function () {
+  //   $(".card").slideUp()
+  // })
+
+
+  // Slide Up Method Width Transition (Give Parameters in Milliseconds)
+
+
+  // $(".slideUp").click(function () {
+  //   $(".card").slideUp(700)
+  // })
+
+
+  // Slide Up Method Width Callback Function
+
+
+  $(".slideUp").click(function () {
+    $(".card").slideUp(700, function () {
+      $("h2").text("Hide")
+    })
   })
 
 
-  // Fade Out Method Width Transition (Give Parameters in Milliseconds)
+  // Show Element Using Slide Down Method
 
-
-  // $(".fadeOut").click(function () {
-  //     $(".card").fadeOut(3000)
+  // $(".slideDown").click(function () {
+  //     $(".card").slideDown()
   // })
 
 
-  // Fade Out Method Width Callback Function
+  // Slide Down Method Width Transition (Give Parameters in Milliseconds)
 
 
-  // $(".fadeOut").click(function () {
-  //   $(".card").fadeOut(3000, function () {
-  //     $("h2").text("Fade Out")
+  // $(".slideDown").click(function () {
+  //     $(".card").slideDown(700)
+  // })
+
+
+  // Slide Down Method Width Callback Function
+
+
+  // $(".slideDown").click(function () {
+  //   $(".card").slideDown(700, function () {
+  //     $("h2").text("Slide Down")
   //   })
   // })
 
 
 
-  // Show Element Using FadeIn Method
+  // Hide And Show Element Using Slide Toggle Method
 
 
-  // $(".fadeIn").click(function () {
-  //     $(".card").fadeIn();
-  // });
+  $(".slideToggle").click(function () {
+      $(".card").slideToggle()
+  })
 
 
-  // FadeIn Method Width Transition (Give Parameters in Milliseconds)
+  // Slide Toggle Method Width Transition (Give Parameters in Milliseconds)
 
 
-  // $(".fadeIn").click(function () {
-  //     $(".card").fadeIn(3000);
-  // });
+  // $(".slideToggle").click(function () {
+  //     $(".card").slideToggle(700)
+  // })
 
 
-  // FadeIn Method Width Callback Function
+  // Slide Toggle Method Width Callback Function
 
 
-  // $(".fadeIn").click(function () {
-  //     $(".card").fadeIn(300, function () {
-  //         $("h2").text("FadeIn")
+  // $(".slideToggle").click(function () {
+  //     $(".card").slideToggle(700, function(){
+  //         $("h2").text("Toggle")
   //     })
-  // })
-
-
-  // Hide And Show Element Using Fade Toggle Method
-
-
-  // $(".fadeToggle").click(function () {
-  //     $(".card").fadeToggle()
-  // })
-
-
-  // Fade Toggle Method Width Transition (Give Parameters in Milliseconds)
-
-
-  // $(".fadeToggle").click(function () {
-  //     $(".card").fadeToggle(3000)
-  // })
-
-
-  // Fade Toggle Method Width Callback Function
-
-
-  // $(".fadeToggle").click(function () {
-  //     $(".card").fadeToggle(3000, function () {
-  //         $("h2").text("Fade Toggle")
-  //     })
-  // })
-
-
-  // Fade To Method Width Parameters
-
-
-  // $(".fadeTo").click(function () {
-  //   $(".card").fadeTo(3000, 0, function () {
-  //     $("h2").text("Fade To")
-  //   })
   // })
 
 });
